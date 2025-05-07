@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(10, 25, 48);
+  padding: 2rem;
+}
+.navigation .nav-left li {
+  list-style: none;
+}
+.navigation .nav-left li a {
+  font-family: "Cal Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(77, 207, 194);
+  font-size: 24px;
+}
+.navigation .nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navigation .nav-right li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.navigation .nav-right li a {
+  text-decoration: none;
+  color: rgb(136, 146, 175);
+}
+.navigation .nav-right li a .nav-numbers {
+  color: rgb(77, 207, 194);
+  margin: 0.5rem;
+  font-family: "Electrolize", sans-serif;
+}
+
+#resume-button {
+  color: rgb(77, 207, 194);
+  border: 1px solid rgb(77, 207, 194);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */

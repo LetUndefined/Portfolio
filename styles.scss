@@ -1,0 +1,64 @@
+$primary-color: rgb(204, 214, 246);
+$secondary-color: rgb(136, 146, 175);
+$extra-color: rgb(77, 207, 194);
+$background-color: rgb(10, 25, 48);
+$box-color: rgb(17, 34, 64);
+$main-font: "Cal Sans", sans-serif;
+$secondary-font: "Electrolize", sans-serif;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  @include flex;
+  justify-content: space-between;
+  background-color: $background-color;
+  padding: 2rem;
+
+  .nav-left {
+    li {
+      list-style: none;
+      a {
+        font-family: $main-font;
+        text-decoration: none;
+        color: $extra-color;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .nav-right {
+    @include flex;
+    gap: 2rem;
+    li {
+      @include flex;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+
+        .nav-numbers {
+          color: $extra-color;
+          margin: 0.5rem;
+          font-family: $secondary-font;
+        }
+      }
+    }
+  }
+}
+
+#resume-button {
+  color: $extra-color;
+  border: 1px solid $extra-color;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
