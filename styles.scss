@@ -21,7 +21,7 @@ $secondary-font: "Electrolize", sans-serif;
   @include flex;
   justify-content: space-between;
   background-color: $background-color;
-  padding: 2rem;
+  padding: 1rem 3rem;
 
   .nav-left {
     li {
@@ -45,11 +45,13 @@ $secondary-font: "Electrolize", sans-serif;
       a {
         text-decoration: none;
         color: $secondary-color;
+        font-family: $main-font;
 
         .nav-numbers {
           color: $extra-color;
-          margin: 0.5rem;
+          margin: 0.2rem;
           font-family: $secondary-font;
+          font-size: 12px;
         }
       }
     }
