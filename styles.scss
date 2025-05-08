@@ -6,6 +6,12 @@ $box-color: rgb(17, 34, 64);
 $main-font: "Cal Sans", sans-serif;
 $secondary-font: "Electrolize", sans-serif;
 
+@mixin fontStyle {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @mixin button-style {
   color: $extra-color;
   border: 1px solid $extra-color;
@@ -17,6 +23,28 @@ $secondary-font: "Electrolize", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin title-font {
+  font-family: $main-font;
+  font-weight: 400;
+  font-style: normal;
+  color: $primary-color;
+  font-size: 2rem;
+}
+
+@mixin number-font {
+  color: $extra-color;
+  margin: 0.2rem;
+  font-family: $secondary-font;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+@mixin p-font {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 18px;
 }
 * {
   padding: 0;
@@ -59,19 +87,48 @@ $secondary-font: "Electrolize", sans-serif;
         font-family: $main-font;
 
         .nav-numbers {
+          display: inline-block;
           color: $extra-color;
           margin: 0.2rem;
           font-family: $secondary-font;
           font-size: 12px;
+          transition: transform 0.2s ease;
         }
       }
     }
   }
 }
 
+.nav-right a:hover .nav-numbers {
+  transform: translateX(-5px);
+}
+
 #resume-button {
   @include button-style;
   padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    z-index: -1;
+    transition: 0.4s ease;
+  }
+
+  &:hover::before {
+    left: 0;
+  }
+
+  &:hover {
+    color: $background-color; // optional: flip text color on hover
+  }
 }
 
 body {
@@ -84,7 +141,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0 3rem;
 
   #intro {
@@ -95,23 +152,128 @@ body {
   #name {
     color: $primary-color;
     font-size: 5rem;
+    @include fontStyle;
   }
 
   #sub-title {
     color: $secondary-color;
     font-size: 3rem;
+    @include fontStyle;
   }
 
   #hero-information {
-    color: $secondary-color;
+    @include p-font;
     width: 100%;
     max-width: 50%;
   }
 
-  button {
-    width: 10rem;
+  #project-button {
+    width: 15rem;
     height: 2rem;
     @include button-style;
     margin-top: 2rem;
+  }
+}
+
+.about-me {
+  height: 50vh;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .about-me-title {
+    @include title-font;
+    margin-bottom: 1rem;
+
+    span {
+      @include number-font;
+    }
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .about-me-text {
+      flex: 2;
+      @include p-font;
+      line-height: 1.4;
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      .container-tech-list {
+        display: flex;
+        gap: 30%;
+        margin-top: 3rem;
+
+        ul {
+          list-style: none;
+        }
+      }
+
+      .container-tech-list li::before {
+        content: "▶";
+        color: $extra-color;
+        font-size: 10px;
+        margin-right: 0.5rem;
+        align-items: center;
+      }
+    }
+  }
+
+  .placeholder-img img {
+    height: 20rem;
+    width: auto;
+    padding-right: 4rem;
+  }
+}
+
+.container-project-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding-left: 3rem;
+  margin-top: 10rem;
+
+  .project-title {
+    @include title-font;
+    margin-bottom: 1rem;
+    span {
+      @include number-font;
+    }
+  }
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .project-image {
+    flex: 2;
+    display: flex;
+    padding-left: 3rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .project-information {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
