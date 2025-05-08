@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main {
+  padding: 0 3rem;
+}
+
 .navigation {
   display: flex;
   justify-content: center;
@@ -21,7 +25,7 @@
   list-style: none;
 }
 .navigation .nav-left li a {
-  font-family: "Cal Sans", sans-serif;
+  font-family: "Cal Sans";
   text-decoration: none;
   color: rgb(77, 207, 194);
   font-size: 24px;
@@ -31,6 +35,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  justify-content: flex-end;
 }
 .navigation .nav-right li {
   display: flex;
@@ -41,7 +46,7 @@
 .navigation .nav-right li a {
   text-decoration: none;
   color: rgb(136, 146, 175);
-  font-family: "Cal Sans", sans-serif;
+  font-family: "Cal Sans";
 }
 .navigation .nav-right li a .nav-numbers {
   display: inline-block;
@@ -95,7 +100,6 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 3rem;
 }
 .hero-container #intro {
   color: rgb(77, 207, 194);
@@ -134,14 +138,13 @@ body {
 
 .about-me {
   height: 50vh;
-  padding-left: 3rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
 .about-me .about-me-title {
-  font-family: "Cal Sans", sans-serif;
+  font-family: "Cal Sans";
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -191,18 +194,15 @@ body {
 .about-me .placeholder-img img {
   height: 20rem;
   width: auto;
-  padding-right: 4rem;
 }
 
 .container-project-title {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 3rem;
   margin-top: 10rem;
 }
 .container-project-title .project-title {
-  font-family: "Cal Sans", sans-serif;
+  font-family: "Cal Sans";
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -216,27 +216,76 @@ body {
   font-size: 12px;
   transition: transform 0.2s ease;
 }
+.container-project-title hr {
+  width: 15rem;
+  height: 0.5px;
+  border: none;
+  background-color: rgb(136, 146, 175);
+  margin: 20px 10px;
+}
 
 .project-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 2rem;
 }
 .project-container .project-image {
+  background-color: rgb(46, 64, 94);
+  padding: 1rem;
+  height: 100%;
+  max-height: 30rem;
   flex: 2;
   display: flex;
-  padding-left: 3rem;
 }
 .project-container .project-image img {
   width: 100%;
   height: auto;
 }
 .project-container .project-information {
-  flex: 2;
+  flex: 1.4;
   display: flex;
   justify-content: center;
+  color: white;
   align-items: flex-start;
   flex-direction: column;
+  gap: 0.5rem;
+}
+.project-container .project-information h4 {
+  color: rgb(77, 207, 194);
+  font-size: 1rem;
+  font-family: "Cal Sans";
+}
+.project-container .project-information h3 {
+  font-family: "Cal Sans";
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(204, 214, 246);
+  font-size: 2rem;
+}
+.project-container .project-information .project-info {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  background-color: rgb(14, 34, 66);
+  color: rgb(136, 146, 175);
+  font-family: "Electrolize", sans-serif;
+  font-size: 18px;
+}
+.project-container .project-information .project-tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Cal Sans";
+  color: rgb(136, 146, 175);
+  font-size: 12px;
+}
+.project-container .project-information img {
+  width: 2rem;
+  height: auto;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

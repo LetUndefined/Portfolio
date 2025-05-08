@@ -3,7 +3,7 @@ $secondary-color: rgb(136, 146, 175);
 $extra-color: rgb(77, 207, 194);
 $background-color: rgb(10, 25, 48);
 $box-color: rgb(17, 34, 64);
-$main-font: "Cal Sans", sans-serif;
+$main-font: "Cal Sans";
 $secondary-font: "Electrolize", sans-serif;
 
 @mixin fontStyle {
@@ -46,10 +46,28 @@ $secondary-font: "Electrolize", sans-serif;
   font-family: $secondary-font;
   font-size: 18px;
 }
+
+@mixin project-information-font {
+  color: $extra-color;
+  font-size: 1rem;
+  font-family: $main-font;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+main {
+  padding: 0 3rem;
+}
+
+@mixin hr-style {
+  width: 15rem;
+  height: 0.5px;
+  border: none;
+  background-color: $secondary-color;
+  margin: 20px 10px;
 }
 
 .navigation {
@@ -77,6 +95,7 @@ $secondary-font: "Electrolize", sans-serif;
   .nav-right {
     @include flex;
     gap: 2rem;
+    justify-content: flex-end;
     li {
       @include flex;
       list-style: none;
@@ -127,7 +146,7 @@ $secondary-font: "Electrolize", sans-serif;
   }
 
   &:hover {
-    color: $background-color; // optional: flip text color on hover
+    color: $background-color;
   }
 }
 
@@ -142,7 +161,6 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 3rem;
 
   #intro {
     color: $extra-color;
@@ -177,7 +195,6 @@ body {
 
 .about-me {
   height: 50vh;
-  padding-left: 3rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -232,16 +249,12 @@ body {
   .placeholder-img img {
     height: 20rem;
     width: auto;
-    padding-right: 4rem;
   }
 }
 
 .container-project-title {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-
-  padding-left: 3rem;
   margin-top: 10rem;
 
   .project-title {
@@ -251,17 +264,24 @@ body {
       @include number-font;
     }
   }
+  hr {
+    @include hr-style;
+  }
 }
 
 .project-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 2rem;
 
   .project-image {
+    background-color: rgb(46, 64, 94);
+    padding: 1rem;
+    height: 100%;
+    max-height: 30rem;
     flex: 2;
     display: flex;
-    padding-left: 3rem;
 
     img {
       width: 100%;
@@ -270,10 +290,45 @@ body {
   }
 
   .project-information {
-    flex: 2;
+    flex: 1.4;
     display: flex;
     justify-content: center;
+    color: white;
     align-items: flex-start;
     flex-direction: column;
+    gap: 0.5rem;
+
+    h4 {
+      @include project-information-font;
+    }
+
+    h3 {
+      @include title-font;
+    }
+
+    .project-info {
+      border-radius: 5px;
+      width: 100%;
+      max-width: 100%;
+      padding: 2rem;
+      background-color: rgb(14, 34, 66);
+      @include p-font;
+    }
+
+    .project-tech {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: $main-font;
+      color: $secondary-color;
+      font-size: 12px;
+    }
+
+    img {
+      width: 2rem;
+      height: auto;
+      margin-top: 1rem;
+    }
   }
 }
