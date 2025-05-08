@@ -8,9 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10%;
   justify-content: space-between;
   background-color: rgb(10, 25, 48);
-  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 3rem;
 }
 .navigation .nav-left li {
   list-style: none;
@@ -48,8 +52,49 @@
 #resume-button {
   color: rgb(77, 207, 194);
   border: 1px solid rgb(77, 207, 194);
-  padding: 0.5rem 1rem;
   border-radius: 5px;
+  background-color: rgb(10, 25, 48);
+  padding: 0.5rem 1rem;
+}
+
+body {
+  background-color: rgb(10, 25, 48);
+}
+
+.hero-container {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+.hero-container #intro {
+  color: rgb(77, 207, 194);
+  font-size: 1rem;
+}
+.hero-container #name {
+  color: rgb(204, 214, 246);
+  font-size: 5rem;
+}
+.hero-container #sub-title {
+  color: rgb(136, 146, 175);
+  font-size: 3rem;
+}
+.hero-container #hero-information {
+  color: rgb(136, 146, 175);
+  width: 100%;
+  max-width: 50%;
+}
+.hero-container button {
+  width: 10rem;
+  height: 2rem;
+  color: rgb(77, 207, 194);
+  border: 1px solid rgb(77, 207, 194);
+  border-radius: 5px;
+  background-color: rgb(10, 25, 48);
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

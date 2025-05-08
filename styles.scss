@@ -6,6 +6,13 @@ $box-color: rgb(17, 34, 64);
 $main-font: "Cal Sans", sans-serif;
 $secondary-font: "Electrolize", sans-serif;
 
+@mixin button-style {
+  color: $extra-color;
+  border: 1px solid $extra-color;
+  border-radius: 5px;
+  background-color: $background-color;
+}
+
 @mixin flex {
   display: flex;
   justify-content: center;
@@ -19,9 +26,13 @@ $secondary-font: "Electrolize", sans-serif;
 
 .navigation {
   @include flex;
+  height: 10%;
   justify-content: space-between;
   background-color: $background-color;
-  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 3rem;
 
   .nav-left {
     li {
@@ -59,8 +70,48 @@ $secondary-font: "Electrolize", sans-serif;
 }
 
 #resume-button {
-  color: $extra-color;
-  border: 1px solid $extra-color;
+  @include button-style;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.hero-container {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 3rem;
+
+  #intro {
+    color: $extra-color;
+    font-size: 1rem;
+  }
+
+  #name {
+    color: $primary-color;
+    font-size: 5rem;
+  }
+
+  #sub-title {
+    color: $secondary-color;
+    font-size: 3rem;
+  }
+
+  #hero-information {
+    color: $secondary-color;
+    width: 100%;
+    max-width: 50%;
+  }
+
+  button {
+    width: 10rem;
+    height: 2rem;
+    @include button-style;
+    margin-top: 2rem;
+  }
 }
