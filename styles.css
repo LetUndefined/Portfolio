@@ -27,7 +27,7 @@ main {
 .navigation .nav-left li a {
   font-family: "Cal Sans";
   text-decoration: none;
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   font-size: 24px;
 }
 .navigation .nav-right {
@@ -50,9 +50,9 @@ main {
 }
 .navigation .nav-right li a .nav-numbers {
   display: inline-block;
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   margin: 0.2rem;
-  font-family: "Electrolize", sans-serif;
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
   font-size: 12px;
   transition: transform 0.2s ease;
 }
@@ -62,10 +62,12 @@ main {
 }
 
 #resume-button {
-  color: rgb(77, 207, 194);
-  border: 1px solid rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
+  border: 1px solid rgb(83, 229, 214);
   border-radius: 5px;
   background-color: rgb(10, 25, 48);
+  font-family: "Cal Sans";
+  cursor: pointer !important;
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 1;
@@ -102,8 +104,8 @@ body {
   gap: 0.5rem;
 }
 .hero-container #intro {
-  color: rgb(77, 207, 194);
-  font-size: 1rem;
+  color: rgb(83, 229, 214);
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
 }
 .hero-container #name {
   color: rgb(204, 214, 246);
@@ -129,10 +131,12 @@ body {
 .hero-container #project-button {
   width: 15rem;
   height: 2rem;
-  color: rgb(77, 207, 194);
-  border: 1px solid rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
+  border: 1px solid rgb(83, 229, 214);
   border-radius: 5px;
   background-color: rgb(10, 25, 48);
+  font-family: "Cal Sans";
+  cursor: pointer !important;
   margin-top: 2rem;
 }
 
@@ -152,10 +156,10 @@ body {
   margin-bottom: 1rem;
 }
 .about-me .about-me-title span {
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   margin: 0.2rem;
-  font-family: "Electrolize", sans-serif;
-  font-size: 12px;
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+  font-size: 16px;
   transition: transform 0.2s ease;
 }
 .about-me .about-me-container {
@@ -186,7 +190,7 @@ body {
 }
 .about-me .about-me-container .about-me-text .container-tech-list li::before {
   content: "▶";
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   font-size: 10px;
   margin-right: 0.5rem;
   align-items: center;
@@ -210,10 +214,10 @@ body {
   margin-bottom: 1rem;
 }
 .container-project-title .project-title span {
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   margin: 0.2rem;
-  font-family: "Electrolize", sans-serif;
-  font-size: 12px;
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+  font-size: 16px;
   transition: transform 0.2s ease;
 }
 .container-project-title hr {
@@ -229,18 +233,24 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  margin-top: 6rem;
 }
 .project-container .project-image {
   background-color: rgb(46, 64, 94);
-  padding: 1rem;
+  padding: 0.5rem;
   height: 100%;
+  border-radius: 5px;
   max-height: 30rem;
   flex: 2;
   display: flex;
 }
+.project-container .project-image video {
+  border-radius: 5px;
+}
 .project-container .project-image img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 .project-container .project-information {
   flex: 1.4;
@@ -252,7 +262,7 @@ body {
   gap: 0.5rem;
 }
 .project-container .project-information h4 {
-  color: rgb(77, 207, 194);
+  color: rgb(83, 229, 214);
   font-size: 1rem;
   font-family: "Cal Sans";
 }
@@ -286,6 +296,80 @@ body {
   width: 2rem;
   height: auto;
   margin-top: 1rem;
+}
+.project-container .project-information .link-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-container.reverse {
+  flex-direction: row-reverse;
+  margin-top: 6rem;
+}
+
+.contact-section {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-section .contact-container h4 {
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+  color: rgb(83, 229, 214);
+}
+.contact-section .contact-container h2 {
+  font-family: "Cal Sans";
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(204, 214, 246);
+  font-size: 2rem;
+  font-size: 3rem;
+}
+.contact-section .contact-container p {
+  color: rgb(136, 146, 175);
+  font-family: "Electrolize", sans-serif;
+  font-size: 18px;
+  width: 45%;
+}
+.contact-section .contact-container a {
+  color: rgb(83, 229, 214);
+  border: 1px solid rgb(83, 229, 214);
+  border-radius: 5px;
+  background-color: rgb(10, 25, 48);
+  font-family: "Cal Sans";
+  cursor: pointer !important;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.contact-section .contact-container a::before {
+  content: "";
+  background-color: white;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: 0.4s ease;
+}
+.contact-section .contact-container a:hover::before {
+  left: 0;
+}
+.contact-section .contact-container a:hover {
+  color: rgb(10, 25, 48);
 }
 
 /*# sourceMappingURL=styles.css.map */
