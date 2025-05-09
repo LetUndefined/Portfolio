@@ -3,8 +3,8 @@ $secondary-color: rgb(136, 146, 175);
 $extra-color: rgb(83, 229, 214);
 $background-color: rgb(10, 25, 48);
 $box-color: rgb(17, 34, 64);
-$main-font: "Cal Sans";
-$secondary-font: "Electrolize", sans-serif;
+$main-font: "Cal Sans", sans-serif, helvetica;
+$secondary-font: "Inter", sans-serif;
 $jetbrain-font: "JetBrains Mono", Consolas, "Courier New", monospace;
 
 @mixin fontStyle {
@@ -19,7 +19,7 @@ $jetbrain-font: "JetBrains Mono", Consolas, "Courier New", monospace;
   border-radius: 5px;
   background-color: $background-color;
   font-family: $main-font;
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 @mixin flex {
@@ -47,7 +47,7 @@ $jetbrain-font: "JetBrains Mono", Consolas, "Courier New", monospace;
 @mixin p-font {
   color: $secondary-color;
   font-family: $secondary-font;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @mixin project-information-font {
@@ -59,6 +59,7 @@ $jetbrain-font: "JetBrains Mono", Consolas, "Courier New", monospace;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -125,7 +126,7 @@ main {
   transform: translateX(-5px);
 }
 
-#resume-button {
+.nav-right li #resume-button {
   @include button-style;
   padding: 0.5rem 1rem;
   position: relative;
@@ -184,13 +185,14 @@ body {
 
   #hero-information {
     @include p-font;
+    font-family: $secondary-font;
     width: 100%;
     max-width: 50%;
   }
 
   #project-button {
-    width: 15rem;
-    height: 2rem;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
     @include button-style;
     margin-top: 2rem;
   }
@@ -356,7 +358,7 @@ body {
 }
 
 .contact-section {
-  height: 100vh;
+  height: 85vh;
   text-align: center;
   @include flex;
 
@@ -380,7 +382,7 @@ body {
       width: 45%;
     }
 
-    a {
+    button {
       @include button-style;
       padding: 0.5rem 2rem;
       text-decoration: none;
@@ -405,6 +407,313 @@ body {
       }
       &:hover {
         color: $background-color;
+      }
+    }
+  }
+}
+
+.footer {
+  @include flex;
+  flex-direction: column;
+  .footer-logo {
+    @include flex;
+    gap: 1rem;
+
+    i {
+      font-size: 30px;
+      color: #333;
+      transition: color 0.3s ease;
+      margin-bottom: 2.5rem;
+      color: $secondary-color;
+
+      &:hover {
+        color: $extra-color;
+      }
+    }
+  }
+
+  p {
+    color: $secondary-color;
+    font-family: $main-font;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+}
+
+.scrolled {
+  box-shadow: -1px -1px 10px black;
+}
+
+// Media Queries
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 0 2rem;
+  }
+
+  .hero-container {
+    #hero-information {
+      max-width: 70%;
+    }
+  }
+
+  .about-me {
+    .about-me-container {
+      .about-me-text {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navigation {
+    padding: 0 1.5rem;
+  }
+
+  .hero-container {
+    #name {
+      font-size: 4rem;
+    }
+
+    #sub-title {
+      font-size: 2.5rem;
+    }
+
+    #hero-information {
+      max-width: 80%;
+    }
+  }
+
+  .project-container {
+    flex-direction: column;
+    gap: 2rem;
+
+    &.reverse {
+      flex-direction: column;
+    }
+
+    .project-image {
+      max-height: 25rem;
+    }
+
+    .project-information {
+      align-items: center;
+      text-align: center;
+
+      h4,
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  .contact-section {
+    margin-top: 8rem;
+  }
+
+  .about-me {
+    .about-me-container {
+      .about-me-text {
+        .container-tech-list {
+          margin-bottom: 4rem;
+        }
+      }
+      .placeholder-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+          height: 20rem;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
+
+  .navigation {
+    padding: 0 1rem;
+
+    .nav-right {
+      gap: 1rem;
+    }
+  }
+
+  .hero-container {
+    #name {
+      font-size: 3rem;
+    }
+
+    #sub-title {
+      font-size: 2rem;
+    }
+
+    #hero-information {
+      max-width: 100%;
+    }
+  }
+
+  .about-me {
+    height: auto;
+    padding: 2rem 0;
+
+    .about-me-container {
+      flex-direction: column;
+
+      .about-me-text {
+        .container-tech-list {
+          margin-bottom: 4rem;
+        }
+      }
+
+      .placeholder-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+          height: 15rem;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    margin-top: 8rem;
+
+    .contact-container {
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  .project-container {
+    .project-information {
+      align-items: center;
+      text-align: center;
+
+      h4,
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navigation {
+    gap: 1rem;
+    .nav-left {
+      li a {
+        font-size: 20px;
+      }
+    }
+
+    .nav-right {
+      gap: 0.5rem;
+
+      li a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .hero-container {
+    #name {
+      font-size: 2.5rem;
+    }
+
+    #sub-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .about-me {
+    .about-me-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  .project-container {
+    .project-information {
+      align-items: center;
+      text-align: center;
+
+      h4,
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+
+  .contact-section {
+    margin-top: 8rem;
+
+    .contact-container {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .about-me {
+    .about-me-container {
+      .about-me-text {
+        .container-tech-list {
+          margin-bottom: 4rem;
+        }
+      }
+      .placeholder-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+          height: 12rem;
+          width: auto;
+        }
       }
     }
   }

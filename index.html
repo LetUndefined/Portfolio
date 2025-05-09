@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Portfolio</title>
   </head>
   <body>
@@ -18,51 +22,48 @@
       <nav class="navigation">
         <ul class="nav-left">
           <li>
-            <a href="">Portfolio</a>
+            <a href="#hero">Portfolio</a>
           </li>
         </ul>
         <ul class="nav-right">
           <li>
-            <a href=""> <span class="nav-numbers">01.</span>About</a>
+            <a href="#about-me"> <span class="nav-numbers">01.</span>About</a>
           </li>
           <li>
-            <a href=""><span class="nav-numbers">02.</span>Project</a>
+            <a href="#projects"><span class="nav-numbers">02.</span>Projects</a>
           </li>
           <li>
-            <a href=""><span class="nav-numbers">03.</span>Contact</a>
+            <a href="#contact"><span class="nav-numbers">03.</span>Contact</a>
           </li>
           <li>
-            <a id="resume-button" href="">Resume</a>
+            <a id="resume-button" href="docs/D'Angelo Sandro 2025.pdf" download="D'Angelo Sandro 2025.pdf" >Resume</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero-container">
           <h1 id="intro">Hi, my name is</h4>
           <h1 id="name">D'Angelo Sandro.</h1>
           <h2 id="sub-title">I build things for the web.</h2>
           <p id="hero-information">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, perferendis sapiente. Illo excepturi vero unde doloremque at ratione soluta fuga dolores ipsa eius, modi aut labore, harum esse illum
-            magnam.
+            Welcome to my front-end portfolio! I focus on creating seamless, user-friendly experiences that are both visually engaging and fully functional. 
           </p>
-          <button id="project-button">Check out my projects!</button>
+          <a href="#projects" id="project-button">Check out my projects!</a>
         </div>
       </section>
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <div class="container-about-me">
           <h3 class="about-me-title"><span>01.</span>About me</h3>
         </div>
         <div class="about-me-container">
           <div class="about-me-text">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum dicta distinctio quidem, animi doloribus natus accusantium culpa, impedit, incidunt labore aliquid dolorem veritatis consequuntur recusandae
-              rem. Dicta qui laborum saepe!
+              Hi, I’m Sandro! I’m a front-end developer with a passion for creating clean, responsive, and visually appealing websites. With a strong foundation in HTML, CSS, JavaScript, and modern development tools, I aim to build seamless, user-friendly experiences. I’m driven by the challenge of turning design concepts into fully functional web applications that are not only efficient but also delightful to use.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nulla mollitia officia explicabo laudantium placeat eius illo, maxime harum praesentium at nemo quibusdam necessitatibus! Harum aliquam facilis
-              nam aliquid consectetur.
+              I’m constantly learning and growing, keeping up with new trends and technologies in the ever-evolving world of web development. Whether it’s building from scratch or improving an existing project, I thrive on turning ideas into reality.
             </p>
             <p>Here are a few technologies i've been working with recently:</p>
             <div class="container-tech-list">
@@ -81,31 +82,12 @@
           </div>
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="container-project-title">
           <h3 class="project-title"><span>02.</span>Some things i've built</h3>
           <hr />
         </div>
-        <div class="project-container">
-          <div class="project-image">
-            <video autoplay muted loop width="100%" height="100%" >
-            <source src="video/blackjack.mp4" type="video/mp4" />
-          </div>
-          <div class="project-information">
-            <h4>Featured Project</h4>
-            <h3>Blackjack</h3>
-            <p class="project-info">
-              This is a simple blackjack game where you play against the dealer. It uses a point system with chips, and your data is saved using localStorage. It's my first project and a fun way to learn coding basics.
-            </p>
-            <div class="project-tech">
-              <p class="project-text">Html</p>
-              <p class="project-text">Css</p>
-              <p class="project-text">Javascript</p>
-            </div>
-            <a href="https://github.com/LetUndefined/Blackjack" target="_blank"><img src="images/github-logo.svg" alt=""></a>
-          </div>
-        </div>
-        <div class="project-container reverse">
+                <div class="project-container">
           <div class="project-image">
             <img src="images/Atelierlore.png" alt="" />
           </div>
@@ -125,6 +107,25 @@
               <a href="https://github.com/LetUndefined/Project-Lore" target="_blank"><img src="images/github-logo.svg" alt=""></a>
               <a href="https://atelierlore.com/"  target="_blank"><img src="images/link-image.png" alt=""></a>
             </div>
+          </div>
+        </div>
+        <div class="project-container reverse">
+          <div class="project-image">
+            <video autoplay muted loop width="100%" height="100%" >
+            <source src="video/blackjack.mp4" type="video/mp4" />
+          </div>
+          <div class="project-information">
+            <h4>Featured Project</h4>
+            <h3>Blackjack</h3>
+            <p class="project-info">
+              This is a simple blackjack game where you play against the dealer. It uses a point system with chips, and your data is saved using localStorage. It's my first project and a fun way to learn coding basics.
+            </p>
+            <div class="project-tech">
+              <p class="project-text">Html</p>
+              <p class="project-text">Css</p>
+              <p class="project-text">Javascript</p>
+            </div>
+            <a href="https://github.com/LetUndefined/Blackjack" target="_blank"><img src="images/github-logo.svg" alt=""></a>
           </div>
         </div>
         <div class="project-container">
@@ -168,14 +169,25 @@
           </div>
         </div>
       </section>
-      <section class="contact-section">
+      <section class="contact-section" id="contact">
         <div class="contact-container">
           <h4><span>03.</span>What's Next?</h4>
           <h2>Get In Touch</h2>
           <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, i'll do my best to get back to you!</p>
-          <a href="">Say Hello</a>
+          <button type="submit" onclick="openEmailApp()">Say Hello</button>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer-logo">
+        <a href="mailto:sandroodangelo@hotmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/LetUndefined" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sandro-dangelo-80150b227/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-text">
+        <p>Build by Sandro</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

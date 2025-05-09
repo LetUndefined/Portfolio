@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -25,7 +26,7 @@ main {
   list-style: none;
 }
 .navigation .nav-left li a {
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   text-decoration: none;
   color: rgb(83, 229, 214);
   font-size: 24px;
@@ -46,7 +47,7 @@ main {
 .navigation .nav-right li a {
   text-decoration: none;
   color: rgb(136, 146, 175);
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
 }
 .navigation .nav-right li a .nav-numbers {
   display: inline-block;
@@ -61,19 +62,19 @@ main {
   transform: translateX(-5px);
 }
 
-#resume-button {
+.nav-right li #resume-button {
   color: rgb(83, 229, 214);
   border: 1px solid rgb(83, 229, 214);
   border-radius: 5px;
   background-color: rgb(10, 25, 48);
-  font-family: "Cal Sans";
-  cursor: pointer !important;
+  font-family: "Cal Sans", sans-serif, helvetica;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
-#resume-button::before {
+.nav-right li #resume-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -84,10 +85,10 @@ main {
   z-index: -1;
   transition: 0.4s ease;
 }
-#resume-button:hover::before {
+.nav-right li #resume-button:hover::before {
   left: 0;
 }
-#resume-button:hover {
+.nav-right li #resume-button:hover {
   color: rgb(10, 25, 48);
 }
 
@@ -123,20 +124,21 @@ body {
 }
 .hero-container #hero-information {
   color: rgb(136, 146, 175);
-  font-family: "Electrolize", sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
   width: 100%;
   max-width: 50%;
 }
 .hero-container #project-button {
-  width: 15rem;
-  height: 2rem;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
   color: rgb(83, 229, 214);
   border: 1px solid rgb(83, 229, 214);
   border-radius: 5px;
   background-color: rgb(10, 25, 48);
-  font-family: "Cal Sans";
-  cursor: pointer !important;
+  font-family: "Cal Sans", sans-serif, helvetica;
+  cursor: pointer;
   margin-top: 2rem;
 }
 
@@ -148,7 +150,7 @@ body {
   flex-direction: column;
 }
 .about-me .about-me-title {
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -173,8 +175,8 @@ body {
 .about-me .about-me-container .about-me-text {
   flex: 2;
   color: rgb(136, 146, 175);
-  font-family: "Electrolize", sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
   line-height: 1.4;
 }
 .about-me .about-me-container .about-me-text p {
@@ -206,7 +208,7 @@ body {
   margin-top: 10rem;
 }
 .container-project-title .project-title {
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -264,10 +266,10 @@ body {
 .project-container .project-information h4 {
   color: rgb(83, 229, 214);
   font-size: 1rem;
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
 }
 .project-container .project-information h3 {
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -280,15 +282,15 @@ body {
   padding: 2rem;
   background-color: rgb(14, 34, 66);
   color: rgb(136, 146, 175);
-  font-family: "Electrolize", sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 .project-container .project-information .project-tech {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   color: rgb(136, 146, 175);
   font-size: 12px;
 }
@@ -310,7 +312,7 @@ body {
 }
 
 .contact-section {
-  height: 100vh;
+  height: 85vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -328,7 +330,7 @@ body {
   color: rgb(83, 229, 214);
 }
 .contact-section .contact-container h2 {
-  font-family: "Cal Sans";
+  font-family: "Cal Sans", sans-serif, helvetica;
   font-weight: 400;
   font-style: normal;
   color: rgb(204, 214, 246);
@@ -337,24 +339,24 @@ body {
 }
 .contact-section .contact-container p {
   color: rgb(136, 146, 175);
-  font-family: "Electrolize", sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
   width: 45%;
 }
-.contact-section .contact-container a {
+.contact-section .contact-container button {
   color: rgb(83, 229, 214);
   border: 1px solid rgb(83, 229, 214);
   border-radius: 5px;
   background-color: rgb(10, 25, 48);
-  font-family: "Cal Sans";
-  cursor: pointer !important;
+  font-family: "Cal Sans", sans-serif, helvetica;
+  cursor: pointer;
   padding: 0.5rem 2rem;
   text-decoration: none;
   z-index: 1;
   position: relative;
   overflow: hidden;
 }
-.contact-section .contact-container a::before {
+.contact-section .contact-container button::before {
   content: "";
   background-color: white;
   z-index: -1;
@@ -365,11 +367,232 @@ body {
   left: -100%;
   transition: 0.4s ease;
 }
-.contact-section .contact-container a:hover::before {
+.contact-section .contact-container button:hover::before {
   left: 0;
 }
-.contact-section .contact-container a:hover {
+.contact-section .contact-container button:hover {
   color: rgb(10, 25, 48);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .footer-logo i {
+  font-size: 30px;
+  color: #333;
+  transition: color 0.3s ease;
+  margin-bottom: 2.5rem;
+  color: rgb(136, 146, 175);
+}
+.footer .footer-logo i:hover {
+  color: rgb(83, 229, 214);
+}
+.footer p {
+  color: rgb(136, 146, 175);
+  font-family: "Cal Sans", sans-serif, helvetica;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+.scrolled {
+  box-shadow: -1px -1px 10px black;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 0 2rem;
+  }
+  .hero-container #hero-information {
+    max-width: 70%;
+  }
+  .about-me .about-me-container .about-me-text {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navigation {
+    padding: 0 1.5rem;
+  }
+  .hero-container #name {
+    font-size: 4rem;
+  }
+  .hero-container #sub-title {
+    font-size: 2.5rem;
+  }
+  .hero-container #hero-information {
+    max-width: 80%;
+  }
+  .project-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .project-container.reverse {
+    flex-direction: column;
+  }
+  .project-container .project-image {
+    max-height: 25rem;
+  }
+  .project-container .project-information {
+    align-items: center;
+    text-align: center;
+  }
+  .project-container .project-information h4,
+  .project-container .project-information h3 {
+    text-align: center;
+  }
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+  }
+  .container-project-title hr {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .contact-section {
+    margin-top: 8rem;
+  }
+  .about-me .about-me-container .about-me-text .container-tech-list {
+    margin-bottom: 4rem;
+  }
+  .about-me .about-me-container .placeholder-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-me .about-me-container .placeholder-img img {
+    height: 20rem;
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
+  .navigation {
+    padding: 0 1rem;
+  }
+  .navigation .nav-right {
+    gap: 1rem;
+  }
+  .hero-container #name {
+    font-size: 3rem;
+  }
+  .hero-container #sub-title {
+    font-size: 2rem;
+  }
+  .hero-container #hero-information {
+    max-width: 100%;
+  }
+  .about-me {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .about-me .about-me-container {
+    flex-direction: column;
+  }
+  .about-me .about-me-container .about-me-text .container-tech-list {
+    margin-bottom: 4rem;
+  }
+  .about-me .about-me-container .placeholder-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-me .about-me-container .placeholder-img img {
+    height: 15rem;
+    width: auto;
+  }
+  .contact-section {
+    margin-top: 8rem;
+  }
+  .contact-section .contact-container p {
+    width: 80%;
+  }
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+  }
+  .container-project-title hr {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .project-container .project-information {
+    align-items: center;
+    text-align: center;
+  }
+  .project-container .project-information h4,
+  .project-container .project-information h3 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navigation {
+    gap: 1rem;
+  }
+  .navigation .nav-left li a {
+    font-size: 20px;
+  }
+  .navigation .nav-right {
+    gap: 0.5rem;
+  }
+  .navigation .nav-right li a {
+    font-size: 14px;
+  }
+  .hero-container #name {
+    font-size: 2.5rem;
+  }
+  .hero-container #sub-title {
+    font-size: 1.5rem;
+  }
+  .about-me .about-me-title {
+    font-size: 1.5rem;
+  }
+  .container-project-title {
+    justify-content: center;
+    text-align: center;
+  }
+  .container-project-title hr {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .project-container .project-information {
+    align-items: center;
+    text-align: center;
+  }
+  .project-container .project-information h4,
+  .project-container .project-information h3 {
+    text-align: center;
+  }
+  .contact-section {
+    margin-top: 8rem;
+  }
+  .contact-section .contact-container h2 {
+    font-size: 2rem;
+  }
+  .contact-section .contact-container p {
+    width: 100%;
+  }
+  .about-me .about-me-container .about-me-text .container-tech-list {
+    margin-bottom: 4rem;
+  }
+  .about-me .about-me-container .placeholder-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-me .about-me-container .placeholder-img img {
+    height: 12rem;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
