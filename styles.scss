@@ -229,6 +229,7 @@ body {
 
       p {
         margin-bottom: 1.5rem;
+        margin-right: 8rem;
       }
 
       .container-tech-list {
@@ -253,6 +254,7 @@ body {
 
   .placeholder-img img {
     height: 20rem;
+    border-radius: 10px;
     width: auto;
   }
 }
@@ -460,6 +462,10 @@ body {
     .about-me-container {
       .about-me-text {
         flex: 1;
+
+        p {
+          margin-right: 0rem;
+        }
       }
     }
   }
@@ -524,6 +530,9 @@ body {
   .about-me {
     .about-me-container {
       .about-me-text {
+        p {
+          margin-right: 0rem;
+        }
         .container-tech-list {
           margin-bottom: 4rem;
         }
@@ -577,6 +586,9 @@ body {
       flex-direction: column;
 
       .about-me-text {
+        p {
+          margin-right: 0rem;
+        }
         .container-tech-list {
           margin-bottom: 4rem;
         }
@@ -685,7 +697,7 @@ body {
   }
 
   .contact-section {
-    margin-top: 8rem;
+    margin-top: 3rem;
 
     .contact-container {
       h2 {
@@ -700,6 +712,9 @@ body {
 
   .about-me {
     .about-me-container {
+      p {
+        margin-right: 0rem;
+      }
       .about-me-text {
         .container-tech-list {
           margin-bottom: 4rem;
@@ -711,7 +726,7 @@ body {
         width: 100%;
 
         img {
-          height: 12rem;
+          height: 14rem;
           width: auto;
         }
       }
