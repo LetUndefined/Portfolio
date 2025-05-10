@@ -140,6 +140,10 @@ body {
   font-family: "Cal Sans", sans-serif, helvetica;
   cursor: pointer;
   margin-top: 2rem;
+  transition: 0.2s ease;
+}
+.hero-container #project-button:hover {
+  transform: translateY(-5px);
 }
 
 .about-me {
@@ -307,6 +311,10 @@ body {
   align-items: center;
   gap: 1rem;
 }
+.project-container .project-information a:hover {
+  transform: translateY(-5px);
+  transition: 0.4s ease;
+}
 
 .project-container.reverse {
   flex-direction: row-reverse;
@@ -407,6 +415,18 @@ body {
 
 .scrolled {
   box-shadow: -1px -1px 10px black;
+  transition: 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 1200px) {
