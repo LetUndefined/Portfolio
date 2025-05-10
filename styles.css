@@ -21,6 +21,7 @@ main {
   top: 0;
   width: 100%;
   padding: 0 3rem;
+  z-index: 1000;
 }
 .navigation .nav-left li {
   list-style: none;
