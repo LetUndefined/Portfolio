@@ -33,3 +33,22 @@ function checkScroll() {
 
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
+
+// Handle video autoplay
+document.querySelectorAll("video").forEach((video) => {
+  // Set video attributes
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+  video.setAttribute("muted", "");
+
+  // Try to play the video
+  const playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch((error) => {
+      // Auto-play was prevented
+      // Show a "Play" button so that user can start playback manually
+      console.log("Autoplay prevented:", error);
+    });
+  }
+});
