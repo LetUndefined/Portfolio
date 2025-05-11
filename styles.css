@@ -23,6 +23,21 @@ main {
   padding: 0 3rem;
   z-index: 1000;
 }
+.navigation .hamburger {
+  cursor: pointer;
+  padding: 10px;
+  gap: 5px;
+  flex-direction: column;
+  display: none;
+  z-index: 1001;
+}
+.navigation .hamburger span {
+  height: 3px;
+  width: 25px;
+  background: rgb(83, 229, 214);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
 .navigation .nav-left li {
   list-style: none;
 }
@@ -567,17 +582,44 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
-  .navigation {
-    gap: 1rem;
-  }
-  .navigation .nav-left li a {
-    font-size: 20px;
+  .navigation .hamburger {
+    display: flex;
   }
   .navigation .nav-right {
-    gap: 0.5rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgb(17, 34, 64);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    padding: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+  .navigation .nav-right.active {
+    right: 0;
+  }
+  .navigation .nav-right li {
+    width: 100%;
+    text-align: center;
   }
   .navigation .nav-right li a {
-    font-size: 14px;
+    color: rgb(204, 214, 246);
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem 0;
+    transition: color 0.3s ease;
+  }
+  .navigation .nav-right li a:hover {
+    color: rgb(83, 229, 214);
+  }
+  .navigation .nav-right li #resume-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
   }
   .hero-container #name {
     font-size: 2.5rem;

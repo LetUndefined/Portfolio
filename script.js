@@ -34,21 +34,25 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
 
-// Handle video autoplay
-document.querySelectorAll("video").forEach((video) => {
-  // Set video attributes
-  video.setAttribute("playsinline", "");
-  video.setAttribute("webkit-playsinline", "");
-  video.setAttribute("muted", "");
+const hamburger = document.getElementById("hamburger");
+const navRight = document.getElementById("nav-right");
+const navLinks = document.querySelectorAll(".nav-right a");
 
-  // Try to play the video
-  const playPromise = video.play();
+hamburger.addEventListener("click", () => {
+  navRight.classList.toggle("active");
+});
 
-  if (playPromise !== undefined) {
-    playPromise.catch((error) => {
-      // Auto-play was prevented
-      // Show a "Play" button so that user can start playback manually
-      console.log("Autoplay prevented:", error);
-    });
+navLinks.forEach((span) => {
+  span.addEventListener("click", () => {
+    navRight.classList.remove("active");
+  });
+});
+
+window.addEventListener("click", (event) => {
+  const isClickInsideNav = navRight.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  if (!isClickInsideNav && !isClickOnHamburger) {
+    navRight.classList.remove("active");
   }
 });
