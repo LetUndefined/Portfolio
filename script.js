@@ -1,3 +1,4 @@
+//Open email app on click
 function openEmailApp() {
   window.location.href = "mailto:sandroodangelo@hotmail.com";
 }
@@ -34,6 +35,7 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("load", checkScroll);
 
+//Open and close sidebar
 const hamburger = document.getElementById("hamburger");
 const navRight = document.getElementById("nav-right");
 const navLinks = document.querySelectorAll(".nav-right a");
