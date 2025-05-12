@@ -74,6 +74,10 @@ main {
   margin: 20px 10px;
 }
 
+section {
+  scroll-margin-top: 94px;
+}
+
 .navigation {
   @include flex;
   height: 10%;
