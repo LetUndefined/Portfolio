@@ -74,10 +74,6 @@ main {
   margin: 20px 10px;
 }
 
-section {
-  scroll-margin-top: 100px;
-}
-
 .navigation {
   @include flex;
   height: 10%;
@@ -231,6 +227,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  scroll-margin-top: 100px;
 
   .about-me-title {
     @include title-font;
@@ -284,6 +281,10 @@ body {
     border-radius: 10px;
     width: auto;
   }
+}
+
+.projects {
+  scroll-margin-top: 120px;
 }
 
 .container-project-title {
